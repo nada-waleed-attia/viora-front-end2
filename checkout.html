@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIORA - إتمام الطلب</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <script src="js/checkout.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a class="navbar-brand" href="viora.html">VIORA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex align-items-center">
+                <a class="nav-link me-3" href="login.html"><i class="fas fa-user"></i></a>
+                <a class="nav-link position-relative" href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="viora.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="women.html">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="children.html">Children</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="checkout-container">
+        <div class="container">
+            <h1 class="checkout-title">Checkout</h1>
+            
+            <div class="row">
+                <!-- معلومات العميل -->
+                <div class="col-lg-8">
+                    <div class="checkout-card">
+                        <h3><i class="fas fa-user-circle me-2"></i>معلومات العميل</h3>
+                        <form id="checkoutForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">الاسم بالكامل</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">البريد الإلكتروني</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone1" class="form-label">رقم الهاتف الأساسي</label>
+                                    <input type="tel" class="form-control" id="phone1" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone2" class="form-label">رقم هاتف آخر (اختياري)</label>
+                                    <input type="tel" class="form-control" id="phone2">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="governorate" class="form-label">المحافظة</label>
+                                <select class="form-select" id="governorate" required>
+                                    <option value="" selected disabled>اختر المحافظة</option>
+                                    <option value="cairo">القاهرة</option>
+                                    <option value="alexandria">الإسكندرية</option>
+                                    <option value="giza">الجيزة</option>
+                                    <option value="sharqia">الشرقية</option>
+                                    <option value="dakahlia">الدقهلية</option>
+                                    <option value="beheira">البحيرة</option>
+                                    <option value="qalyubia">القليوبية</option>
+                                    <option value="minya">المنيا</option>
+                                    <option value="assiut">أسيوط</option>
+                                    <option value="sohag">سوهاج</option>
+                                    <option value="gharbia">الغربية</option>
+                                    <option value="menofia">المنوفية</option>
+                                    <option value="qena">قنا</option>
+                                    <option value="fayoum">الفيوم</option>
+                                    <option value="portsaid">بورسعيد</option>
+                                    <option value="ismailia">الإسماعيلية</option>
+                                    <option value="luxor">الأقصر</option>
+                                    <option value="aswan">أسوان</option>
+                                    <option value="redsea">البحر الأحمر</option>
+                                    <option value="newvalley">الوادي الجديد</option>
+                                    <option value="matrouh">مطروح</option>
+                                    <option value="northsinai">شمال سيناء</option>
+                                    <option value="southsinai">جنوب سيناء</option>
+                                    <option value="benisuef">بني سويف</option>
+                                    <option value="suez">السويس</option>
+                                    <option value="damietta">دمياط</option>
+                                    <option value="kafrelsheikh">كفر الشيخ</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">العنوان بالتفصيل</label>
+                                <textarea class="form-control" id="address" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">ملاحظات إضافية (اختياري)</label>
+                                <textarea class="form-control" id="notes" rows="2"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ملخص الطلب -->
+                <div class="col-lg-4">
+                    <div class="order-summary">
+                        <h3>ملخص الطلب</h3>
+                        <div class="order-items" id="orderItems">
+                            <!-- سيتم إضافة العناصر هنا عبر JavaScript -->
+                        </div>
+                        <div class="order-totals">
+                            <div class="total-row">
+                                <span>المجموع الفرعي</span>
+                                <span id="subtotal">0 ج.م</span>
+                            </div>
+                            <div class="total-row">
+                                <span>الشحن</span>
+                                <span id="shipping">50 ج.م</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>الإجمالي</span>
+                                <span id="grandTotal">0 ج.م</span>
+                            </div>
+                        </div>
+                        <button type="submit" form="checkoutForm" class="btn btn-checkout w-100">تأكيد الطلب</button>
+                        <div class="payment-methods mt-3">
+                            <p class="mb-2">طرق الدفع المتاحة:</p>
+                            <div class="payment-icons d-flex justify-content-between align-items-center">
+                                <div class="payment-icon" title="الدفع عند الاستلام">
+                                    <i class="fas fa-truck"></i>
+                                    <span>الدفع عند الاستلام</span>
+                                </div>
+                                <div class="payment-icon" title="فيزا">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <span>فيزا</span>
+                                </div>
+                                <div class="payment-icon" title="ماستركارد">
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <span>ماستركارد</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Contact Us</h2>
+            <p>We are here to help you</p>
+            <div class="info">
+                <p class="label">For inquiries or orders, please contact us:</p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@viora.com?subject=استفسار" class="link">info@viora.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201234567890" class="link">+20 123 456 7890</a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 <span>VIORA</span> All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

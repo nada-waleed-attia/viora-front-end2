@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIORA - Luxury Perfumes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="backend/static/css/normalize.css">
+    <link rel="stylesheet" href="backend/static/css/viora.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand viora-logo" href="index.html">VIORA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="badge bg-danger cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/women.html">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/children.html">Children</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates/contact-us.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Start Header -->
+    <div class="header">
+        <div class="logo-container">
+            <img src="backend/static/images/viora-logo.jpeg" alt="Viora Logo" class="logo-img">
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">our collections</a></li>
+                    <li><a href="#about">our story</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Landing Section -->
+    <div class="container">
+        <div class="welcome-text">
+            <h2 class="bold-title">Welcome to viora brand</h2>
+            <h1 class="bold-title">Viora</h1>
+            <p class="small-title">A p e r f u m e b r a n d</p>
+        </div>
+    </div>
+    <!-- End Landing Section -->
+
+    <!-- Start Section Buttons -->
+    <div class="section-buttons">
+        <button class="btn men-btn" onclick="window.location.href='templates/men.html'">Men</button>
+        <button class="btn women-btn" onclick="window.location.href='templates/women.html'">Women</button>
+        <button class="btn children-btn" onclick="window.location.href='templates/children.html'">Children</button>
+    </div>
+    <!-- End Section Buttons -->
+
+    <!-- Start Services -->
+    <div class="services" id="services">
+        <div class="container">
+            <h2 class="special-heading">Services</h2>
+            <p>Don't be busy, be productive</p>
+            <div class="services-contant">
+                <div class="col">
+                    <!-- Service 1 -->
+                    <div class="srv">
+                        <i class="fas fa-user-astronaut fa-2x"></i>
+                        <div class="text">
+                            <h3>A Personalized Experience</h3>
+                            <p>At Viora, we believe fragrance is your unique signature. That's why we offer smart recommendations to help you discover the perfect scent for your personality and every occasion.</p>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="srv">
+                        <i class="fas fa-gem fa-2x"></i>
+                        <div class="text">
+                            <h3>Luxury in Every Detail</h3>
+                            <p>We make sure your perfumes arrive elegantly wrapped, with a luxurious touch that turns every order into a gift—for yourself or someone special.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Service 3 -->
+                    <div class="srv">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                        <div class="text">
+                            <h3>Guaranteed Authenticity</h3>
+                            <p>All Viora products are 100% authentic. We also provide a hassle-free exchange policy, so you can shop with confidence and peace of mind.</p>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="srv">
+                        <i class="fas fa-shipping-fast fa-2x"></i>
+                        <div class="text">
+                            <h3>Seamless Shopping Journey</h3>
+                            <p>From fast delivery and real-time order tracking to our exclusive rewards program—every step of your journey with Viora is designed to be truly exceptional.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image image-column">
+                        <img src="https://i.etsystatic.com/12675475/r/il/232ac6/1795813471/il_fullxfull.1795813471_4nuu.jpg" alt="Elegant Bottles" class="feature-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services -->
+
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="special-heading">Our Collections</h2>
+            <p>Discover the essence of luxury in every bottle</p>
+            <div class="portfolio-content">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/61edzWN1HiL._UF1000,1000_QL80_.jpg" alt="Men's Collection">
+                    <div class="info">
+                        <h3>For Him</h3>
+                        <p>Explore our sophisticated men's fragrance collection, featuring bold and masculine scents that leave a lasting impression.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/previews/012/877/886/large_2x/a-luxurious-bottle-of-women-s-perfume-with-notes-of-peony-delicate-floral-fragrance-the-expression-of-natural-odors-pink-background-photo.jpg" alt="Women's Collection">
+                    <div class="info">
+                        <h3>For Her</h3>
+                        <p>Discover our elegant women's perfumes, each bottle containing a unique blend of floral and oriental notes.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqo6o1kr7g2LaC81Qq1dN86nFSm6QTtsg1OQ&s" alt="Gift Sets">
+                    <div class="info">
+                        <h3>Gift Sets</h3>
+                        <p>Perfect presents for every occasion, our gift sets combine our finest fragrances with luxurious packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+
+    <!-- Start About -->
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="special-heading">Our Story</h2>
+            <p>Where Luxury Meets Scent</p>
+            <div class="about-content">
+                <div class="image">
+                    <img src="https://m.media-amazon.com/images/I/61edzWN1HiL._UF1000,1000_QL80_.jpg" alt="Viora Perfume Collection">
+                </div>
+                <div class="text">
+                    <p class="first-paragraph">Founded with a passion for exquisite fragrances, Viora has been crafting luxurious scents that capture the essence of sophistication and elegance. Our journey began with a simple belief: that everyone deserves to experience the transformative power of a perfect fragrance.</p>
+                    <hr class="divider">
+                    <p class="second-paragraph">Each Viora perfume is meticulously blended using the finest ingredients from around the world. Our master perfumers combine traditional techniques with modern innovation to create scents that are as unique as the individuals who wear them. From the first spritz to the final lingering note, we promise an unforgettable olfactory experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Get In Touch</h2>
+            <p>We'd Love to Hear From You</p>
+            <div class="info">
+                <p class="label">For inquiries, orders, or assistance, please contact us:</p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@viora.com?subject=Inquiry" class="link">info@viora.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+201111111111" class="link">+201111111111</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Perfume Street, Cairo, Egypt</span>
+                    </div>
+                </div>
+                <div class="social">
+                    <p>Connect With Us</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        &copy; 2023 <span>Viora</span> All Right Reserved
+    </div>
+    <!-- End Footer -->
+    <script>
+        // Prevent auto-scrolling to anchor on page load
+        if (window.location.hash) {
+            setTimeout(function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 1);
+        }
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="backend/static/js/scroll-effects.js"></script>
+    <script src="backend/static/js/cart.js"></script>
+</body>
+</html>

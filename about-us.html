@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - VIORA</title>
+    <!-- Bootstrap RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/viora.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom JS -->
+    <script src="js/scroll-effects.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            let lastScroll = 0;
+            const navbarHeight = navbar.offsetHeight;
+            
+            // Set initial styles
+            navbar.style.transition = 'transform 0.3s ease-in-out';
+            navbar.style.transform = 'translateY(0)';
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                // At the top of the page
+                if (currentScroll <= 0) {
+                    navbar.style.transform = 'translateY(0)';
+                    return;
+                }
+                
+                // Scrolling down
+                if (currentScroll > lastScroll && currentScroll > navbarHeight) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } 
+                // Scrolling up
+                else if (currentScroll < lastScroll) {
+                    navbar.style.transform = 'translateY(0)';
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Handle mobile menu toggle
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarToggler) {
+                navbarToggler.addEventListener('click', function() {
+                    navbar.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand viora-logo" href="viora.html">VIORA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="d-lg-none ms-2">Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="viora.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link me-2" href="login.html"><i class="fas fa-user"></i> login</a>
+                            <span class="text-white">/</span>
+                            <a class="nav-link ms-2" href="register.html">register</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h1>About Viora</h1>
+                        <div class="divider"></div>
+                        <p>Welcome to Viora, where luxury meets passion in every bottle. Our journey began with a simple vision: to create fragrances that tell a story, evoke emotions, and leave a lasting impression.</p>
+                        <p>Each of our perfumes is meticulously crafted using the finest ingredients from around the world, blended to perfection by our master perfumers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://cdn.salla.sa/vBypv/aQ2TMCH3JISuVmakTlR6fwZbWvs9m7z5phmCO9Zf.png" alt="Viora Perfume" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="story-content">
+                        <h2>Our Story</h2>
+                        <div class="divider"></div>
+                        <p>Founded in 2010, Viora was born from a passion for creating unique and memorable fragrances. Our founder, a master perfumer with over 15 years of experience, wanted to create a brand that combined traditional craftsmanship with modern innovation.</p>
+                        <p>Today, Viora is recognized globally for its exceptional quality and distinctive scents that capture the essence of luxury and sophistication.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="story-image">
+                        <img src="https://vioraswiss.com/web/image/website/1/logo?unique=58ccfd1" alt="Our Story" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="our-values">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Values</h2>
+                <div class="divider mx-auto"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Quality</h3>
+                        <p>We use only the finest ingredients to ensure each fragrance meets our high standards of excellence.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainability</h3>
+                        <p>We're committed to sustainable practices and environmentally friendly production methods.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Passion</h3>
+                        <p>Our love for perfumery drives us to create exceptional scents that inspire and delight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="our-team">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Meet Our Team</h2>
+                <div class="divider mx-auto"></div>
+                <p class="section-subtitle">The passionate individuals behind Viora's success</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Founder & Master Perfumer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Michael Chen</h4>
+                            <p>Head of Product Development</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="member-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Start Contact -->
+<div class="contact" id="contact">
+    <div class="container">
+        <h2 class="special-heading">Get In Touch</h2>
+        <p>We'd Love to Hear From You</p>
+        <div class="info">
+            <p class="label">For inquiries, orders, or assistance, please contact us:</p>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@viora.com?subject=Inquiry" class="link">info@viora.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+201111111111" class="link">+201111111111</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Perfume Street, Cairo, Egypt</span>
+                </div>
+            </div>
+            <div class="social">
+                <p>Connect With Us</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact -->
+
+<!-- Start Footer -->
+<div class="footer">
+    &copy; 2023 <span>Viora</span> All Right Reserved
+</div>
+<!-- End Footer -->
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

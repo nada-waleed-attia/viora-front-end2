@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women - VIORA</title>
+    <link rel="stylesheet" href="css/men.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <script src="js/cart.js"></script>
+</head>
+<body>
+    <!-- الهيدر -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a class="navbar-brand" href="viora.html">VIORA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link me-2" href="login.html"><i class="fas fa-user"></i> login</a>
+                            <span class="text-white">/</span>
+                            <a class="nav-link ms-2 me-3" href="register.html">register</a>
+                        </div>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                            <span class="d-lg-none ms-2">Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="viora.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="women.html">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="children.html">Children</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- سلايدر وترشيح -->
+    <div class="container mt-4">
+        <div class="welcome-section text-center mb-4">
+            <h2 class="welcome-title animate-welcome">WELCOME TO VIORA WOMEN</h2>
+        </div>
+        <div class="slider-wrapper">
+            <div id="mainSlider" class="carousel slide main-slider mb-3" data-bs-ride="false" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/company/1/applications/62d53777f5ad942d3e505f77/theme/pictures/free/original/CLP-Fragrance-YSL-D-1756591040030.jpeg" class="d-block w-100" alt="عرض 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6nodU7Qpwt7cbToiVoFLlYTRtMK-6kTR4igGkO01IyNN6sT6WQcPWucz8m3t0cgp7ukM&usqp=CAU" class="d-block w-100" alt="عرض 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHPPN6pqtc_tHsUf7j_cucnzoIVHuYAt2TA&s" class="d-block w-100" alt="عرض 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://s.alicdn.com/@sc04/kf/H6f5bb52d3fe4445b93153af1d9a53531d.jpeg" class="d-block w-100" alt="عرض 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://fimgs.net/mdimg/perfume/o.111377.jpg" class="d-block w-100" alt="عرض 5">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev" style="width: 5%;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"></span>
+                    <span class="visually-hidden">السابق</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next" style="width: 5%;">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"></span>
+                    <span class="visually-hidden">التالي</span>
+                </button>
+            </div>
+        </div>
+        <script>
+            // Initialize carousel with manual control
+            document.addEventListener('DOMContentLoaded', function() {
+                var myCarousel = document.getElementById('mainSlider');
+                var carousel = new bootstrap.Carousel(myCarousel, {
+                    interval: false, // Disable auto-sliding
+                    wrap: false,     // Stop at first/last slide
+                    touch: true      // Enable touch swiping
+                });
+
+                // Enable manual control with keyboard arrows
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowRight') {
+                        carousel.next();
+                    } else if (e.key === 'ArrowLeft') {
+                        carousel.prev();
+                    }
+                });
+
+                // Update button states
+                myCarousel.addEventListener('slid.bs.carousel', function () {
+                    var activeIndex = Array.from(this.querySelectorAll('.carousel-item')).indexOf(this.querySelector('.carousel-item.active'));
+                    var prevButton = this.querySelector('.carousel-control-prev');
+                    var nextButton = this.querySelector('.carousel-control-next');
+                    
+                    // Enable/disable prev button
+                    if (activeIndex === 0) {
+                        prevButton.classList.add('disabled');
+                    } else {
+                        prevButton.classList.remove('disabled');
+                    }
+                    
+                    // Enable/disable next button
+                    if (activeIndex === this.querySelectorAll('.carousel-item').length - 1) {
+                        nextButton.classList.add('disabled');
+                    } else {
+                        nextButton.classList.remove('disabled');
+                    }
+                });
+
+                // Initialize button states
+                var event = new Event('slid.bs.carousel');
+                myCarousel.dispatchEvent(event);
+            });
+        </script>
+    </div>
+
+    <!-- الأقسام -->
+    <div class="container">
+        <!-- FRESH VIBES -->
+        <div class="section-title d-flex align-items-center mb-3">
+            <i class="fa-solid fa-leaf me-2" style="color: #28a745; font-size: 1.2em;"></i>
+            <span>FRESH VIBES</span>
+        </div>
+        <div class="fresh-cards-slider position-relative mb-4">
+            <button class="fresh-slider-arrow left" id="freshSliderPrev">
+                <span>&#10094;</span>
+            </button>
+            <div class="fresh-cards-track" id="freshCardsTrack">
+                <!-- كارت 1 -->
+                <a href="product-details.html?product=3" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="https://fimgs.net/mdimg/perfume/o.111377.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum women 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">3000 EL</span>
+                                <br>
+                                <span class="old-price">4100 EL</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 2 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="https://beautikashop.com/cdn/shop/files/vibe_intense_lady.jpg?v=1754052047&width=1946" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum women 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1600 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                            </div>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 3 -->
+               <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHPPN6pqtc_tHsUf7j_cucnzoIVHuYAt2TA&s" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">2000 LE</span>
+                            <br>
+                            <span class="old-price">2900 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 4 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYySDe9PQXYw1i5wZsbL9vbNHJ58PsdQvf3w&s" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1000 LE</span>
+                            <br>
+                            <span class="old-price">1800 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 5 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                       <div class="fresh-card-offer">
+                            <span class="fresh-card-text">950 LE</span>
+                            <br>
+                            <span class="old-price">2000 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 6 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/61onRiIyBYL._UF350,350_QL80_.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1650 LE</span>
+                            <br>
+                            <span class="old-price">2100 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 7 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh 6.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                      <div class="fresh-card-offer">
+                            <span class="fresh-card-text">800 LE</span>
+                            <br>
+                            <span class="old-price">1600 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="fresh-slider-arrow right" id="freshSliderNext">
+                <span>&#10095;</span>
+            </button>
+        </div>
+
+
+        <!-- الأقسام -->
+    <div class="container">
+        <!-- SUMMER VIBES -->
+        <div class="section-title d-flex align-items-center mb-3">
+            <i class="fa-solid fa-sun me-2" style="color: #ffc107; font-size: 1.2em;"></i>
+            <span>SUMMER VIBES</span>
+        </div>
+        <div class="fresh-cards-slider position-relative mb-4">
+            <button class="fresh-slider-arrow left" id="summerSliderPrev">
+                <span>&#10094;</span>
+            </button>
+            <div class="fresh-cards-track" id="summerCardsTrack">
+                <!-- كارت 1 -->
+                <a href="product-details.html?product=3" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6nodU7Qpwt7cbToiVoFLlYTRtMK-6kTR4igGkO01IyNN6sT6WQcPWucz8m3t0cgp7ukM&usqp=CAU" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">3000 EL</span>
+                                <br>
+                                <span class="old-price">4100 EL</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 2 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="images/summer 2.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1600 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                            </div>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 3 -->
+               <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/summer-3.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">2000 LE</span>
+                            <br>
+                            <span class="old-price">2900 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 4 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/summer 4.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1000 LE</span>
+                            <br>
+                            <span class="old-price">1800 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 5 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/summer 4.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                       <div class="fresh-card-offer">
+                            <span class="fresh-card-text">950 LE</span>
+                            <br>
+                            <span class="old-price">2000 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 6 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/summer 5.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1650 LE</span>
+                            <br>
+                            <span class="old-price">2100 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 7 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/summer 6.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                      <div class="fresh-card-offer">
+                            <span class="fresh-card-text">800 LE</span>
+                            <br>
+                            <span class="old-price">1600 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="fresh-slider-arrow right" id="summerSliderNext">
+                <span>&#10095;</span>
+            </button>
+        </div>
+
+        <!-- الأقسام -->
+    <div class="container">
+        <!-- night vibes -->
+        <div class="section-title d-flex align-items-center mb-3">
+            <i class="fa-solid fa-moon me-2" style="color: #6c757d; font-size: 1.2em;"></i>
+            <span>NIGHT VIBES</span>
+        </div>
+        <div class="night-cards-slider position-relative mb-4">
+            <button class="night-slider-arrow left" id="nightSliderPrev">
+                <span>&#10094;</span>
+            </button>
+            <div class="night-cards-track" id="nightCardsTrack">
+                <!-- كارت 1 -->
+                <a href="product-details.html?product=3" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="images/fresh-1.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">3000 EL</span>
+                                <br>
+                                <span class="old-price">4100 EL</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 2 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="images/image.png" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1600 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                            </div>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 3 -->
+               <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh-3.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">2000 LE</span>
+                            <br>
+                            <span class="old-price">2900 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 4 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/VERSACE-EROS-EDT-FOR-MEN-668x1024.png" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1000 LE</span>
+                            <br>
+                            <span class="old-price">1800 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 5 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                       <div class="fresh-card-offer">
+                            <span class="fresh-card-text">950 LE</span>
+                            <br>
+                            <span class="old-price">2000 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 6 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/61onRiIyBYL._UF350,350_QL80_.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1650 LE</span>
+                            <br>
+                            <span class="old-price">2100 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 7 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh 1.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                      <div class="fresh-card-offer">
+                            <span class="fresh-card-text">800 LE</span>
+                            <br>
+                            <span class="old-price">1600 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="night-slider-arrow right" id="nightSliderNext">
+                <span>&#10095;</span>
+            </button>
+        </div>
+        <!-- الأقسام -->
+    <div class="container">
+        <!-- Winter VIBES -->
+        <div class="section-title d-flex align-items-center mb-3">
+            <i class="fa-solid fa-snowflake me-2" style="color: #007bff; font-size: 1.2em;"></i>
+            <span>WINTER VIBES</span>
+        </div>
+        <div class="winter-cards-slider position-relative mb-4">
+            <div class="d-flex justify-content-between mb-3">
+                <button class="winter-slider-arrow left" id="winterSliderPrev">
+                    <span>&#10094;</span>
+                </button>
+                <button class="winter-slider-arrow right" id="winterSliderNext">
+                    <span>&#10095;</span>
+                </button>
+            </div>
+            <div class="winter-cards-track" id="winterCardsTrack">
+                  <!-- كارت 1 -->
+                <a href="product-details.html?product=3" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="images/fresh-1.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">3000 EL</span>
+                                <br>
+                                <span class="old-price">4100 EL</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 2 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                        <img src="images/image.png" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1600 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                            </div>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </a>
+                <!-- كارت 3 -->
+               <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh-3.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">2000 LE</span>
+                            <br>
+                            <span class="old-price">2900 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 4 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/VERSACE-EROS-EDT-FOR-MEN-668x1024.png" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1000 LE</span>
+                            <br>
+                            <span class="old-price">1800 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 5 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                       <div class="fresh-card-offer">
+                            <span class="fresh-card-text">950 LE</span>
+                            <br>
+                            <span class="old-price">2000 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 6 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/61onRiIyBYL._UF350,350_QL80_.jpg" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                        <div class="fresh-card-offer">
+                            <span class="fresh-card-text">1650 LE</span>
+                            <br>
+                            <span class="old-price">2100 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- كارت 7 -->
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
+                    <div class="fresh-card" data-product-id="wprod_${Date.now() + Math.floor(Math.random() * 1000)}">
+                    <img src="images/fresh 1.webp" class="fresh-card-img" alt="SHOW">
+                    <div class="fresh-card-body">
+                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                      <div class="fresh-card-offer">
+                            <span class="fresh-card-text">800 LE</span>
+                            <br>
+                            <span class="old-price">1600 LE</span>
+                            <a href="#" class="btn btn-orange btn-sm"></a>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Get In Touch</h2>
+            <p>We'd Love to Hear From You</p>
+            <div class="info">
+                <p class="label">For inquiries, orders, or assistance, please contact us:</p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@viora.com?subject=Inquiry" class="link">info@viora.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+201111111111" class="link">+201111111111</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Perfume Street, Cairo, Egypt</span>
+                    </div>
+                </div>
+                <div class="social">
+                    <p>Connect With Us</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        &copy; 2023 <span>Viora</span> All Right Reserved
+    </div>
+    <!-- End Footer -->
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/women.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+    <script>
+        // Slider functionality
+        // Simple Slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all sliders
+            const sliders = [
+                { trackId: 'freshCardsTrack', prevBtnId: 'freshSliderPrev', nextBtnId: 'freshSliderNext' },
+                { trackId: 'summerCardsTrack', prevBtnId: 'summerSliderPrev', nextBtnId: 'summerSliderNext' },
+                { trackId: 'nightCardsTrack', prevBtnId: 'nightSliderPrev', nextBtnId: 'nightSliderNext' },
+                { trackId: 'winterCardsTrack', prevBtnId: 'winterSliderPrev', nextBtnId: 'winterSliderNext' }
+            ];
+
+            sliders.forEach(slider => {
+                const track = document.getElementById(slider.trackId);
+                const prevBtn = document.getElementById(slider.prevBtnId);
+                const nextBtn = document.getElementById(slider.nextBtnId);
+                
+                if (!track || !prevBtn || !nextBtn) return;
+
+                const cards = track.querySelectorAll('.fresh-card');
+                if (cards.length === 0) return;
+
+                // Set track styles
+                track.style.display = 'flex';
+                track.style.transition = 'transform 0.3s ease';
+                track.style.gap = '24px';
+                
+                // Calculate card width including gap
+                const cardWidth = cards[0].offsetWidth + 24; // 24px gap
+                let currentPosition = 0;
+                const containerWidth = track.parentElement.offsetWidth;
+                const maxScroll = -(cardWidth * cards.length - containerWidth);
+                
+                // Set track width to fit all cards
+                track.style.width = `${cardWidth * cards.length}px`;
+
+                // Update button states
+                const updateButtons = () => {
+                    prevBtn.disabled = currentPosition >= 0;
+                    nextBtn.disabled = currentPosition <= maxScroll;
+                    
+                    // Add/remove disabled class for styling
+                    prevBtn.classList.toggle('disabled', prevBtn.disabled);
+                    nextBtn.classList.toggle('disabled', nextBtn.disabled);
+                };
+
+                // Move slider function
+                const moveSlider = (direction) => {
+                    const moveAmount = direction === 'next' ? -cardWidth : cardWidth;
+                    currentPosition += moveAmount;
+                    
+                    // Limit the scroll position
+                    if (currentPosition > 0) currentPosition = 0;
+                    if (currentPosition < maxScroll) currentPosition = maxScroll;
+                    
+                    track.style.transform = `translateX(${currentPosition}px)`;
+                    updateButtons();
+                };
+
+                // Event listeners for buttons
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (!nextBtn.disabled) moveSlider('next');
+                });
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (!prevBtn.disabled) moveSlider('prev');
+                });
+
+                // Initialize buttons
+                updateButtons();
+
+                // Handle window resize
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        const newContainerWidth = track.parentElement.offsetWidth;
+                        const newMaxScroll = -(cardWidth * cards.length - newContainerWidth);
+                        
+                        // Adjust current position
+                        if (currentPosition < newMaxScroll) {
+                            currentPosition = newMaxScroll;
+                            track.style.transform = `translateX(${currentPosition}px)`;
+                        }
+                        
+                        updateButtons();
+                    }, 100);
+                });
+            });
+        }); // Close DOMContentLoaded
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const winterTrack = document.getElementById('winterCardsTrack');
+    const winterPrev = document.getElementById('winterSliderPrev'); // الزرار اللي على اليمين
+    const winterNext = document.getElementById('winterSliderNext'); // الزرار اللي على الشمال
+    if (winterTrack && winterPrev && winterNext) {
+        function getCardWidth() {
+            const card = winterTrack.querySelector('.fresh-card');
+            if (card) {
+                const style = getComputedStyle(winterTrack);
+                const gap = parseInt(style.columnGap || style.gap || 24);
+                return card.offsetWidth + gap;
+            }
+            return 284;
+        }
+        // الزرار اللي على اليمين (prev) يعرض الصورة التالية
+        winterPrev.onclick = () => {
+            winterTrack.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        };
+        // الزرار اللي على الشمال (next) يعرض الصورة السابقة
+        winterNext.onclick = () => {
+            winterTrack.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        };
+    }
+});
+</script>
+</body>
+</html>

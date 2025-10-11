@@ -1,0 +1,318 @@
+:root {
+    --primary-color: rgb(241, 205, 137);
+    --accent-color: #e31e24;
+    --white: #ffffff;
+    --light-gray: #f8f8f8;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --font-primary: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--white);
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    min-height: 100vh;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+/* Special Offers Header */
+.special-offers-header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--white);
+}
+
+.special-offers-header h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color:black;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.special-offers-header h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(30, 35, 38, 0.98) !important;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    direction: ltr;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 100%;
+    right: 70%;
+    color:rgb(241, 205, 137);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--main-color) !important;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    order: 2;
+    padding: 0;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+}
+
+.navbar-nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 40%;
+    order: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+    position: relative;
+    list-style: none;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.nav-link i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+.nav-link:hover i {
+    transform: translateY(-2px);
+}
+
+/* Active link */
+.nav-link.active {
+    color: var(--main-color) !important;
+    font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: rgba(30, 35, 38, 0.98);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+}
+
+
+
+/* Offers Grid */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.offer-card {
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+offer-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+.price {
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-right: 8px;
+}
+
+.original-price {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.shop-now-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.shop-now-btn:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .special-offers-header {
+        padding: 30px 15px;
+    }
+    
+    .special-offers-header h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-card {
+        margin-bottom: 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+/* Cart message styling */
+.cart-message {
+    z-index: 1100;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Cart count badge */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e31e24;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Hidden by default */
+}
+
+/* Make sure the cart icon has position relative */
+.nav-link[href="cart.html"] {
+    position: relative;
+}

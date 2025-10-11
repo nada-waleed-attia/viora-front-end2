@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIORA - سلة التسوق</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a class="navbar-brand" href="viora.html">VIORA</a>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <li class="nav-item">
+                <div class="d-flex align-items-center"> 
+                <a class="nav-link me-2" href="login.html">login</a>
+                <span class="text-white">/</span>
+                <a class="nav-link ms-2" href="register.html">register</a>
+            </div>
+            </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="viora.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="women.html">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="children.html">Children</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex align-items-center">
+                            <a class="nav-link me-2" href="login.html"><i class="fas fa-user"></i>login</a>
+                            <span class="text-white">/</span>
+                            <a class="nav-link ms-2" href="register.html">register</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>سلة التسوق</h1>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically inserted here -->
+            <div class="empty-cart-message" style="display: none; text-align: center; padding: 40px 0;">
+                <i class="fas fa-shopping-cart" style="font-size: 48px; color: #ddd; margin-bottom: 20px;"></i>
+                <h3>سلة التسوق فارغة</h3>
+                <p>لم تقم بإضافة أي منتجات إلى السلة بعد</p>
+                <a href="men.html" class="btn-continue-shopping" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #8B5FBF; color: white; text-decoration: none; border-radius: 5px;">
+                    ابدأ التسوق الآن
+                </a>
+            </div>
+        </div>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>ملخص الطلب</h2>
+            
+            <div class="summary-details">
+                <div class="summary-row">
+                    <span>المجموع الفرعي</span>
+                    <span>430 ر.س</span>
+                </div>
+                <div class="summary-row">
+                    <span>التوصيل</span>
+                    <span>25 ج.م</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>الإجمالي</span>
+                    <span class="total-amount">455 ج.م</span>
+                </div>
+            </div>
+            
+            <a href="checkout.html" class="btn-checkout" style="display: block; text-align: center; text-decoration: none;">
+                إتمام الشراء
+            </a>
+        </div>
+    </main>
+
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Get In Touch</h2>
+            <p>We'd Love to Hear From You</p>
+            <div class="info">
+                <p class="label">For inquiries, orders, or assistance, please contact us:</p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@viora.com?subject=Inquiry" class="link">info@viora.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+201111111111" class="link">+201111111111</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Perfume Street, Cairo, Egypt</span>
+                    </div>
+                </div>
+                <div class="social">
+                    <p>Connect With Us</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        &copy; 2023 <span>Viora</span> All Right Reserved
+    </div>
+    <!-- End Footer -->
+    <script>
+        // Cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded, initializing cart...');
+            
+            // Debug: Log current URL and any redirect flags
+            console.log('Current URL:', window.location.href);
+            console.log('Redirect flag:', localStorage.getItem('cart_redirect'));
+            
+            // Clear any redirect flag
+            localStorage.removeItem('cart_redirect');
+            
+            try {
+                // Load cart items from localStorage
+                console.log('Loading cart items...');
+                loadCartItems();
+                
+                // Update cart total on page load
+                console.log('Updating cart total...');
+                updateCartTotal();
+                
+                // Prevent default anchor behavior for # links
+                document.querySelectorAll('a[href="#"]').forEach(link => {
+                    link.addEventListener('click', e => e.preventDefault());
+                });
+                
+                // Initialize empty cart message
+                console.log('Initializing empty cart message...');
+                updateEmptyCartMessage();
+                
+                // Debug: Log current cart state
+                const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+                console.log('Current cart state:', cart);
+                
+            } catch (error) {
+                console.error('Error initializing cart:', error);
+                // Show error message to user
+                const errorDiv = document.createElement('div');
+                errorDiv.style.cssText = 'background-color: #ffebee; color: #c62828; padding: 15px; margin: 10px; border-radius: 4px;';
+                errorDiv.textContent = 'حدث خطأ في تحميل سلة التسوق. يرجى تحديث الصفحة والمحاولة مرة أخرى.';
+                document.body.insertBefore(errorDiv, document.body.firstChild);
+            }
+        });
+        
+        // Load cart items from localStorage
+        function loadCartItems() {
+            console.log('Loading cart items...');
+            const cartContainer = document.getElementById('cartItems');
+            
+            if (!cartContainer) {
+                console.error('Could not find cart container element');
+                return;
+            }
+            
+            let cart = [];
+            
+            try {
+                const cartData = localStorage.getItem('cart');
+                console.log('Raw cart data from localStorage:', cartData);
+                
+                cart = cartData ? JSON.parse(cartData) : [];
+                console.log('Parsed cart data:', cart);
+                
+                if (!Array.isArray(cart)) {
+                    console.warn('Cart data is not an array, resetting to empty array');
+                    cart = [];
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+            } catch (e) {
+                console.error('Error loading cart:', e);
+                cart = [];
+                // Reset corrupted cart data
+                localStorage.setItem('cart', JSON.stringify([]));
+            }
+            
+            // Clear current items
+            const currentItems = document.querySelectorAll('.product-card');
+            console.log(`Removing ${currentItems.length} existing cart items`);
+            currentItems.forEach(item => item.remove());
+            
+            if (!cart || cart.length === 0) {
+                console.log('Cart is empty, showing empty message');
+                updateEmptyCartMessage(true);
+                return;
+            }
+            
+            console.log(`Adding ${cart.length} items to cart`);
+            
+            // Add each item to the cart
+            cart.forEach((item, index) => {
+                try {
+                    console.log(`Creating cart item ${index + 1}:`, item);
+                    const itemElement = createCartItemElement(item, index);
+                    if (itemElement) {
+                        cartContainer.insertBefore(itemElement, cartContainer.firstChild);
+                        console.log(`Added item ${index + 1} to cart`);
+                    } else {
+                        console.warn(`Failed to create element for item ${index + 1}`);
+                    }
+                } catch (e) {
+                    console.error(`Error creating cart item ${index + 1}:`, e);
+                }
+            });
+            
+            updateEmptyCartMessage(false);
+            updateCartTotal();
+            console.log('Finished loading cart items');
+        }
+        
+        // Create cart item element
+        function createCartItemElement(item, index) {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'product-card';
+            itemElement.dataset.id = item.id;
+            
+            itemElement.innerHTML = `
+                <div class="product-image">
+                    <img src="${item.image || 'https://via.placeholder.com/150'}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/150'" loading="lazy">
+                </div>
+                <div class="product-details">
+                    <h2>${item.name}</h2>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+                        <input type="number" id="qty-${item.id}" value="${item.quantity || 1}" min="1" class="quantity-input" onchange="updateCartItem('${item.id}', this.value)">
+                        <button class="quantity-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                        <div class="product-price">${(item.price || 0).toFixed(2)} ج.م</div>
+                    </div>
+                    <button class="btn-remove" onclick="removeItemFromCart('${item.id}')">
+                        <i class="fas fa-trash"></i> إزالة
+                    </button>
+                </div>
+            `;
+            
+            return itemElement;
+        }
+        
+        // Update item quantity
+        function updateQuantity(id, change) {
+            const input = document.getElementById(`qty-${id}`);
+            if (!input) return;
+            
+            let value = parseInt(input.value) + change;
+            if (value < 1) value = 1;
+            input.value = value;
+            
+            updateCartItem(id, value);
+        }
+        
+        // Update cart item in localStorage
+        function updateCartItem(id, newQuantity) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemIndex = cart.findIndex(item => item.id === id);
+            
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity = parseInt(newQuantity);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartTotal();
+            }
+        }
+        
+        // Remove item from cart
+        function removeItemFromCart(id) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const updatedCart = cart.filter(item => item.id !== id);
+            
+            localStorage.setItem('cart', JSON.stringify(updatedCart));
+            loadCartItems(); // Reload cart items
+            updateCartTotal();
+            
+            // Update cart count in header
+            updateCartCount(updatedCart.length);
+        }
+        
+        // Update cart total
+        function updateCartTotal() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let subtotal = 0;
+            
+            cart.forEach(item => {
+                subtotal += (item.price || 0) * (item.quantity || 1);
+            });
+            
+            const shipping = 25; // Fixed shipping cost
+            const total = subtotal + shipping;
+            
+            // Update the DOM
+            const subtotalElement = document.querySelector('.summary-row:first-child span:last-child');
+            const totalElement = document.querySelector('.summary-row:last-child .total-amount');
+            
+            if (subtotalElement) {
+                subtotalElement.textContent = `${subtotal.toFixed(2)} ج.م`;
+            }
+            
+            if (totalElement) {
+                totalElement.textContent = `${total.toFixed(2)} ج.م`;
+            }
+            
+            // Update cart count in header
+            updateCartCount(cart.length);
+        }
+        
+        // Update cart count in header
+        function updateCartCount(count) {
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                cartCount.textContent = count;
+                cartCount.style.display = count > 0 ? 'flex' : 'none';
+            }
+        }
+        
+        // Update empty cart message visibility
+        function updateEmptyCartMessage(show = null) {
+            const emptyMessage = document.querySelector('.empty-cart-message');
+            const cartItems = document.querySelectorAll('.product-card');
+            
+            if (show === null) {
+                show = cartItems.length === 0;
+            }
+            
+            if (emptyMessage) {
+                emptyMessage.style.display = show ? 'block' : 'none';
+            }
+        }
+    </script>
+    
+    <style>
+        /* Animation for removing items */
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-10px); }
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</body>
+</html>
