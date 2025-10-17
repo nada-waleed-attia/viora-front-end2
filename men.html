@@ -2,11 +2,12 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men - VIORA</title>
     <link rel="stylesheet" href="css/men.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-
+    <script src="js/cart.js"></script>
 </head>
 <body>
     <!-- الهيدر -->
@@ -14,18 +15,17 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);">
         <div class="container">
             <a class="navbar-brand" href="viora.html">VIORA</a>
+            
+            <!-- Cart icon - always visible -->
+            <a class="nav-link position-relative d-inline-block" href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count" style="font-size: 0.6rem; display: none;">0</span>
+            </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex align-items-center">
-                <a class="nav-link me-2" href="login.html"><i class="fas fa-user"></i> login</a>
-                <span class="text-white">/</span>
-                <a class="nav-link ms-2 me-3" href="register.html">register</a>
-                <a class="nav-link position-relative" href="cart.html">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count" style="font-size: 0.6rem; display: none;">0</span>
-                </a>
-            </div>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -48,6 +48,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
                     </li>
                 </ul>
             </div>
@@ -135,80 +141,85 @@
                     </div>
                 </a>
                 <!-- كارت 3 -->
-               <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
+               <a href="product-details.html?product=3" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/winter 3.jpg" class="fresh-card-img" alt="WINTER VIBES">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">2000 LE</span>
-                            <br>
-                            <span class="old-price">2900 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/winter 3.jpg" class="fresh-card-img" alt="WINTER VIBES">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">2000 LE</span>
+                                <br>
+                                <span class="old-price">2900 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 4 -->
-                <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
+                <a href="product-details.html?product=4" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/VERSACE-EROS-EDT-FOR-MEN-668x1024.png" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">1000 LE</span>
-                            <br>
-                            <span class="old-price">1800 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/VERSACE-EROS-EDT-FOR-MEN-668x1024.png" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1000 LE</span>
+                                <br>
+                                <span class="old-price">1800 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 5 -->
-                <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
+                <a href="product-details.html?product=5" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                       <div class="fresh-card-offer">
-                            <span class="fresh-card-text">950 LE</span>
-                            <br>
-                            <span class="old-price">2000 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">950 LE</span>
+                                <br>
+                                <span class="old-price">2000 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 6 -->
-                <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
+                <a href="product-details.html?product=6" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/61onRiIyBYL._UF350,350_QL80_.jpg" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">1650 LE</span>
-                            <br>
-                            <span class="old-price">2100 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/61onRiIyBYL._UF350,350_QL80_.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1650 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 7 -->
-                <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
+                <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/fresh-1.webp" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                      <div class="fresh-card-offer">
-                            <span class="fresh-card-text">800 LE</span>
-                            <br>
-                            <span class="old-price">1600 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">800 LE</span>
+                                <br>
+                                <span class="old-price">1600 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <button class="fresh-slider-arrow right" id="freshSliderNext">
                 <span>&#10095;</span>
@@ -263,78 +274,83 @@
                 <!-- كارت 3 -->
                <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/summer 4.jpg" class="fresh-card-img" alt="SUMMER VIBES">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">2000 LE</span>
-                            <br>
-                            <span class="old-price">2900 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/summer 4.jpg" class="fresh-card-img" alt="SUMMER VIBES">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">2000 LE</span>
+                                <br>
+                                <span class="old-price">2900 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 4 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/summer 4.jpg" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">1000 LE</span>
-                            <br>
-                            <span class="old-price">1800 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/summer 5.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1000 LE</span>
+                                <br>
+                                <span class="old-price">1800 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 5 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/summer 5.webp" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                       <div class="fresh-card-offer">
-                            <span class="fresh-card-text">950 LE</span>
-                            <br>
-                            <span class="old-price">2000 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/summer 5.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">950 LE</span>
+                                <br>
+                                <span class="old-price">2000 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 6 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/summer 6.jpg" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">1650 LE</span>
-                            <br>
-                            <span class="old-price">2100 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/summer 6.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1650 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 7 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/SUMMER 1.webp" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                      <div class="fresh-card-offer">
-                            <span class="fresh-card-text">800 LE</span>
-                            <br>
-                            <span class="old-price">1600 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/SUMMER 1.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">800 LE</span>
+                                <br>
+                                <span class="old-price">1600 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <button class="fresh-slider-arrow right" id="summerSliderNext">
                 <span>&#10095;</span>
@@ -348,11 +364,11 @@
             <i class="fa-solid fa-moon me-2" style="color: #6c757d; font-size: 1.2em;"></i>
             <span>NIGHT VIBES</span>
         </div>
-        <div class="night-cards-slider position-relative mb-4">
-            <button class="night-slider-arrow left" id="nightSliderPrev">
+        <div class="fresh-cards-slider position-relative mb-4">
+            <button class="fresh-slider-arrow left" id="nightSliderPrev">
                 <span>&#10094;</span>
             </button>
-            <div class="night-cards-track" id="nightCardsTrack">
+            <div class="fresh-cards-track" id="nightCardsTrack">
                 <!-- كارت 1 -->
                 <a href="product-details.html?product=1" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
@@ -388,80 +404,85 @@
                 <!-- كارت 3 -->
                <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/winter 3.jpg" class="fresh-card-img" alt="WINTER VIBES">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">2000 LE</span>
-                            <br>
-                            <span class="old-price">2900 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/winter 3.jpg" class="fresh-card-img" alt="WINTER VIBES">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">2000 LE</span>
+                                <br>
+                                <span class="old-price">2900 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 4 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/VERSACE-EROS-EDT-FOR-MEN-668x1024.png" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">1000 LE</span>
-                            <br>
-                            <span class="old-price">1800 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/winter 4.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1000 LE</span>
+                                <br>
+                                <span class="old-price">1800 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 5 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/fresh 5.jpg" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                       <div class="fresh-card-offer">
-                            <span class="fresh-card-text">950 LE</span>
-                            <br>
-                            <span class="old-price">2000 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/winter 5.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">950 LE</span>
+                                <br>
+                                <span class="old-price">2000 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 6 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/61onRiIyBYL._UF350,350_QL80_.jpg" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                        <div class="fresh-card-offer">
-                            <span class="fresh-card-text">1650 LE</span>
-                            <br>
-                            <span class="old-price">2100 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/winter 6.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">1650 LE</span>
+                                <br>
+                                <span class="old-price">2100 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- كارت 7 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/fresh-1.webp" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                      <div class="fresh-card-offer">
-                            <span class="fresh-card-text">800 LE</span>
-                            <br>
-                            <span class="old-price">1600 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/fresh 1.webp" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">800 LE</span>
+                                <br>
+                                <span class="old-price">1600 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <button class="night-slider-arrow right" id="nightSliderNext">
+            <button class="fresh-slider-arrow right" id="nightSliderNext">
                 <span>&#10095;</span>
             </button>
         </div>
@@ -472,16 +493,11 @@
             <i class="fa-solid fa-snowflake me-2" style="color: #007bff; font-size: 1.2em;"></i>
             <span>WINTER VIBES</span>
         </div>
-        <div class="winter-cards-slider position-relative mb-4">
-            <div class="d-flex justify-content-between mb-3">
-                <button class="winter-slider-arrow left" id="winterSliderPrev">
-                    <span>&#10094;</span>
-                </button>
-                <button class="winter-slider-arrow right" id="winterSliderNext">
-                    <span>&#10095;</span>
-                </button>
-            </div>
-            <div class="winter-cards-track" id="winterCardsTrack">
+        <div class="fresh-cards-slider position-relative mb-4">
+            <button class="fresh-slider-arrow left" id="winterSliderPrev">
+                <span>&#10094;</span>
+            </button>
+            <div class="fresh-cards-track" id="winterCardsTrack">
                   <!-- كارت 1 -->
                 <a href="product-details.html?product=1" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
@@ -577,20 +593,23 @@
                 <!-- كارت 7 -->
                 <a href="product-details.html?product=2" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="fresh_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="../images/fresh 1.webp" class="fresh-card-img" alt="SHOW">
-                    <div class="fresh-card-body">
-                        <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
-                      <div class="fresh-card-offer">
-                            <span class="fresh-card-text">800 LE</span>
-                            <br>
-                            <span class="old-price">1600 LE</span>
-                            <a href="#" class="btn btn-orange btn-sm"></a>
-                            <button class="add-to-cart-btn">Add to Cart</button>
+                        <img src="images/01.jpg" class="fresh-card-img" alt="SHOW">
+                        <div class="fresh-card-body">
+                            <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
+                            <div class="fresh-card-offer">
+                                <span class="fresh-card-text">800 LE</span>
+                                <br>
+                                <span class="old-price">1600 LE</span>
+                                <a href="#" class="btn btn-orange btn-sm"></a>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
+                </a>
             </div>
+            <button class="fresh-slider-arrow right" id="winterSliderNext">
+                <span>&#10095;</span>
+            </button>
         </div>
             <!-- Start Contact -->
     <div class="contact" id="contact">
@@ -635,103 +654,66 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Cart functionality -->
-    <script src="../js/cart.js"></script>
-    <script src="../js/men.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/men.js"></script>
+    
     <script>
-        // Simple Slider functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all sliders
-            const sliders = [
-                { trackId: 'freshCardsTrack', prevBtnId: 'freshSliderPrev', nextBtnId: 'freshSliderNext' },
-                { trackId: 'summerCardsTrack', prevBtnId: 'summerSliderPrev', nextBtnId: 'summerSliderNext' },
-                { trackId: 'nightCardsTrack', prevBtnId: 'nightSliderPrev', nextBtnId: 'nightSliderNext' },
-                { trackId: 'winterCardsTrack', prevBtnId: 'winterSliderPrev', nextBtnId: 'winterSliderNext' }
-            ];
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+    // Define all sliders
+    const sliders = [
+        { track: 'freshCardsTrack', prev: 'freshSliderPrev', next: 'freshSliderNext' },
+        { track: 'summerCardsTrack', prev: 'summerSliderPrev', next: 'summerSliderNext' },
+        { track: 'nightCardsTrack', prev: 'nightSliderPrev', next: 'nightSliderNext' },
+        { track: 'winterCardsTrack', prev: 'winterSliderPrev', next: 'winterSliderNext' }
+    ];
 
-            sliders.forEach(slider => {
-                const track = document.getElementById(slider.trackId);
-                const prevBtn = document.getElementById(slider.prevBtnId);
-                const nextBtn = document.getElementById(slider.nextBtnId);
-                
-                if (!track || !prevBtn || !nextBtn) return;
+    // Initialize each slider
+    sliders.forEach(slider => {
+        const track = document.getElementById(slider.track);
+        const prevBtn = document.getElementById(slider.prev);
+        const nextBtn = document.getElementById(slider.next);
 
-                const cards = track.querySelectorAll('.fresh-card');
-                if (cards.length === 0) return;
+        if (track && prevBtn && nextBtn) {
+            function getCardWidth() {
+                const card = track.querySelector('.fresh-card');
+                if (card) {
+                    const style = getComputedStyle(track);
+                    const gap = parseInt(style.columnGap || style.gap || 24);
+                    return card.offsetWidth + gap;
+                }
+                return 284;
+            }
 
-                // Set track styles
-                track.style.display = 'flex';
-                track.style.transition = 'transform 0.3s ease';
-                track.style.gap = '24px';
-                
-                // Calculate card width including gap
-                const cardWidth = cards[0].offsetWidth + 24; // 24px gap
-                let currentPosition = 0;
-                const containerWidth = track.parentElement.offsetWidth;
-                const maxScroll = -(cardWidth * cards.length - containerWidth);
-                
-                // Set track width to fit all cards
-                track.style.width = `${cardWidth * cards.length}px`;
-
-                // Update button states
-                const updateButtons = () => {
-                    prevBtn.disabled = currentPosition >= 0;
-                    nextBtn.disabled = currentPosition <= maxScroll;
-                    
-                    // Add/remove disabled class for styling
-                    prevBtn.classList.toggle('disabled', prevBtn.disabled);
-                    nextBtn.classList.toggle('disabled', nextBtn.disabled);
-                };
-
-                // Move slider function
-                const moveSlider = (direction) => {
-                    const moveAmount = direction === 'next' ? -cardWidth : cardWidth;
-                    currentPosition += moveAmount;
-                    
-                    // Limit the scroll position
-                    if (currentPosition > 0) currentPosition = 0;
-                    if (currentPosition < maxScroll) currentPosition = maxScroll;
-                    
-                    track.style.transform = `translateX(${currentPosition}px)`;
-                    updateButtons();
-                };
-
-                // Event listeners for buttons
-                nextBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (!nextBtn.disabled) moveSlider('next');
-                });
-
-                prevBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (!prevBtn.disabled) moveSlider('prev');
-                });
-
-                // Initialize buttons
-                updateButtons();
-
-                // Handle window resize
-                let resizeTimer;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
-                        const newContainerWidth = track.parentElement.offsetWidth;
-                        const newMaxScroll = -(cardWidth * cards.length - newContainerWidth);
-                        
-                        // Adjust current position
-                        if (currentPosition < newMaxScroll) {
-                            currentPosition = newMaxScroll;
-                            track.style.transform = `translateX(${currentPosition}px)`;
-                        }
-                        
-                        updateButtons();
-                    }, 100);
+            // Check if page is RTL
+            const isRTL = document.documentElement.dir === 'rtl' || document.body.dir === 'rtl';
+            
+            // Previous button (left arrow) - in RTL scrolls right, in LTR scrolls left
+            prevBtn.addEventListener('click', () => {
+                const scrollAmount = isRTL ? getCardWidth() : -getCardWidth();
+                track.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
                 });
             });
-        }); // Close DOMContentLoaded
-    </script>
-    <!-- Include cart.js first -->
-    <script src="js/cart.js"></script>
-    <!-- Then include men.js -->
-    <script src="js/men.js"></script>
+
+            // Next button (right arrow) - in RTL scrolls left, in LTR scrolls right
+            nextBtn.addEventListener('click', () => {
+                const scrollAmount = isRTL ? -getCardWidth() : getCardWidth();
+                track.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>

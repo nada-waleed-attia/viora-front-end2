@@ -2,11 +2,12 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Children - VIORA</title>
     <link rel="stylesheet" href="css/men.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-
+    <script src="js/cart.js"></script>
 </head>
 <body>
     <!-- الهيدر -->
@@ -14,18 +15,17 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px);">
         <div class="container">
             <a class="navbar-brand" href="viora.html">VIORA</a>
+            
+            <!-- Cart icon - always visible -->
+            <a class="nav-link position-relative d-inline-block" href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count" style="font-size: 0.6rem; display: none;">0</span>
+            </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="d-flex align-items-center">
-                <a class="nav-link me-2" href="login.html"><i class="fas fa-user"></i> login</a>
-                <span class="text-white">/</span>
-                <a class="nav-link ms-2 me-3" href="register.html">register</a>
-                <a class="nav-link position-relative" href="cart.html">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count" style="font-size: 0.6rem; display: none;">0</span>
-                </a>
-            </div>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -41,10 +41,19 @@
                         <a class="nav-link" href="women.html">Women</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="children.html">Children</a>
+                        <a class="nav-link active" href="children.html">Children</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="women.html">offers</a>
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
                     </li>
                 </ul>
             </div>
@@ -228,7 +237,7 @@
                 <!-- كارت 1 -->
                 <a href="product-details.html?product=6" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                        <img src="images/summer-1.webp" class="fresh-card-img" alt="SHOW">
+                        <img src="https://m.media-amazon.com/images/I/51LWdj4uZML.jpg" class="fresh-card-img" alt="SHOW">
                         <div class="fresh-card-body">
                             <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
                             <div class="fresh-card-offer">
@@ -244,7 +253,7 @@
                 <!-- كارت 2 -->
                 <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                        <img src="images/summer 2.jpg" class="fresh-card-img" alt="SHOW">
+                        <img src="https://www.sensiksa.com/_next/image?url=https%3A%2F%2Fd3b1m2wz5ltyqb.cloudfront.net%2Fproducts%2Fbunai-dolphins-love-kids-perfume-edt-50ml%2Fpkl0sn-large.jpeg&w=3840&q=75" class="fresh-card-img" alt="SHOW">
                         <div class="fresh-card-body">
                             <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
                             <div class="fresh-card-offer">
@@ -260,7 +269,7 @@
                 <!-- كارت 3 -->
                <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/summer-3.webp" class="fresh-card-img" alt="SHOW">
+                    <img src="https://cdn.salla.sa/jUKNllgYO635kLXvzRZdffaDUMravxly52ugurIH.jpeg" class="fresh-card-img" alt="SHOW">
                     <div class="fresh-card-body">
                         <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
                         <div class="fresh-card-offer">
@@ -353,7 +362,7 @@
                 <!-- كارت 1 -->
                 <a href="product-details.html?product=6" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                        <img src="images/fresh-1.webp" class="fresh-card-img" alt="SHOW">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0RwIJaHMlYxgxqLOTZpK_w1-Lo4iWDFeFyQ&s" class="fresh-card-img" alt="SHOW">
                         <div class="fresh-card-body">
                             <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
                             <div class="fresh-card-offer">
@@ -369,7 +378,7 @@
                 <!-- كارت 2 -->
                 <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                        <img src="images/image.png" class="fresh-card-img" alt="SHOW">
+                        <img src="https://f.nooncdn.com/p/pzsku/ZC6792E6293C545952547Z/45/_/1671991736/2d6ff22e-b183-43fc-b4e9-e510c6f30e68.jpg?width=480" class="fresh-card-img" alt="SHOW">
                         <div class="fresh-card-body">
                             <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
                             <div class="fresh-card-offer">
@@ -385,7 +394,7 @@
                 <!-- كارت 3 -->
                <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/fresh-3.webp" class="fresh-card-img" alt="SHOW">
+                    <img src="https://shop-ourkids.com/cdn/shop/files/emma-perfume-girls-ourkids-oko-2.jpg?v=1759078499&width=1000" class="fresh-card-img" alt="SHOW">
                     <div class="fresh-card-body">
                         <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
                         <div class="fresh-card-offer">
@@ -482,7 +491,7 @@
                   <!-- كارت 1 -->
                 <a href="product-details.html?product=6" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                        <img src="images/fresh-1.webp" class="fresh-card-img" alt="SHOW">
+                        <img src="https://shop-ourkids.com/cdn/shop/files/emma-perfume-girls-ourkids-oko-1.jpg?v=1759078497&width=1000" class="fresh-card-img" alt="SHOW">
                         <div class="fresh-card-body">
                             <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
                             <div class="fresh-card-offer">
@@ -498,7 +507,7 @@
                 <!-- كارت 2 -->
                 <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                        <img src="images/image.png" class="fresh-card-img" alt="SHOW">
+                        <img src="https://v2cdn.boutiqaat.com/media/catalog/product/I/-/I-00000006836-R-6.jpg" class="fresh-card-img" alt="SHOW">
                         <div class="fresh-card-body">
                             <h6 class="fresh-card-title">Vibes Parfum Men 100ML Perfume</h6>
                             <div class="fresh-card-offer">
@@ -514,7 +523,7 @@
                 <!-- كارت 3 -->
                <a href="product-details.html?product=7" class="fresh-card-link" style="text-decoration:none;">
                     <div class="fresh-card" data-product-id="cprod_${Date.now() + Math.floor(Math.random() * 1000)}">
-                    <img src="images/fresh-3.webp" class="fresh-card-img" alt="SHOW">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV-mHhcE63RqktaoCAV8ZJwGskDqP65nDRrw&s " class="fresh-card-img" alt="SHOW">
                     <div class="fresh-card-body">
                         <h6 class="fresh-card-title">Fresh Vibe Richard for women and men</h6>
                         <div class="fresh-card-offer">
@@ -841,94 +850,54 @@
         });
         // Simple Slider functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all sliders
+            // Define all sliders
             const sliders = [
-                { trackId: 'freshCardsTrack', prevBtnId: 'freshSliderPrev', nextBtnId: 'freshSliderNext' },
-                { trackId: 'summerCardsTrack', prevBtnId: 'summerSliderPrev', nextBtnId: 'summerSliderNext' },
-                { trackId: 'nightCardsTrack', prevBtnId: 'nightSliderPrev', nextBtnId: 'nightSliderNext' },
-                { trackId: 'winterCardsTrack', prevBtnId: 'winterSliderPrev', nextBtnId: 'winterSliderNext' }
+                { track: 'freshCardsTrack', prev: 'freshSliderPrev', next: 'freshSliderNext' },
+                { track: 'summerCardsTrack', prev: 'summerSliderPrev', next: 'summerSliderNext' },
+                { track: 'nightCardsTrack', prev: 'nightSliderPrev', next: 'nightSliderNext' },
+                { track: 'winterCardsTrack', prev: 'winterSliderPrev', next: 'winterSliderNext' }
             ];
 
+            // Initialize each slider
             sliders.forEach(slider => {
-                const track = document.getElementById(slider.trackId);
-                const prevBtn = document.getElementById(slider.prevBtnId);
-                const nextBtn = document.getElementById(slider.nextBtnId);
-                
-                if (!track || !prevBtn || !nextBtn) return;
+                const track = document.getElementById(slider.track);
+                const prevBtn = document.getElementById(slider.prev);
+                const nextBtn = document.getElementById(slider.next);
 
-                const cards = track.querySelectorAll('.fresh-card');
-                if (cards.length === 0) return;
-
-                // Set track styles
-                track.style.display = 'flex';
-                track.style.transition = 'transform 0.3s ease';
-                track.style.gap = '24px';
-                
-                // Calculate card width including gap
-                const cardWidth = cards[0].offsetWidth + 24; // 24px gap
-                let currentPosition = 0;
-                const containerWidth = track.parentElement.offsetWidth;
-                const maxScroll = -(cardWidth * cards.length - containerWidth);
-                
-                // Set track width to fit all cards
-                track.style.width = `${cardWidth * cards.length}px`;
-
-                // Update button states
-                const updateButtons = () => {
-                    prevBtn.disabled = currentPosition >= 0;
-                    nextBtn.disabled = currentPosition <= maxScroll;
-                    
-                    // Add/remove disabled class for styling
-                    prevBtn.classList.toggle('disabled', prevBtn.disabled);
-                    nextBtn.classList.toggle('disabled', nextBtn.disabled);
-                };
-
-                // Move slider function
-                const moveSlider = (direction) => {
-                    const moveAmount = direction === 'next' ? -cardWidth : cardWidth;
-                    currentPosition += moveAmount;
-                    
-                    // Limit the scroll position
-                    if (currentPosition > 0) currentPosition = 0;
-                    if (currentPosition < maxScroll) currentPosition = maxScroll;
-                    
-                    track.style.transform = `translateX(${currentPosition}px)`;
-                    updateButtons();
-                };
-
-                // Event listeners for buttons
-                nextBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (!nextBtn.disabled) moveSlider('next');
-                });
-
-                prevBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (!prevBtn.disabled) moveSlider('prev');
-                });
-
-                // Initialize buttons
-                updateButtons();
-
-                // Handle window resize
-                let resizeTimer;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
-                        const newContainerWidth = track.parentElement.offsetWidth;
-                        const newMaxScroll = -(cardWidth * cards.length - newContainerWidth);
-                        
-                        // Adjust current position
-                        if (currentPosition < newMaxScroll) {
-                            currentPosition = newMaxScroll;
-                            track.style.transform = `translateX(${currentPosition}px)`;
+                if (track && prevBtn && nextBtn) {
+                    function getCardWidth() {
+                        const card = track.querySelector('.fresh-card');
+                        if (card) {
+                            const style = getComputedStyle(track);
+                            const gap = parseInt(style.columnGap || style.gap || 24);
+                            return card.offsetWidth + gap;
                         }
-                        
-                        updateButtons();
-                    }, 100);
-                });
+                        return 284;
+                    }
+
+                    // Check if page is RTL
+                    const isRTL = document.documentElement.dir === 'rtl' || document.body.dir === 'rtl';
+                    
+                    // Previous button (left arrow) - in RTL scrolls right, in LTR scrolls left
+                    prevBtn.addEventListener('click', () => {
+                        const scrollAmount = isRTL ? getCardWidth() : -getCardWidth();
+                        track.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    // Next button (right arrow) - in RTL scrolls left, in LTR scrolls right
+                    nextBtn.addEventListener('click', () => {
+                        const scrollAmount = isRTL ? -getCardWidth() : getCardWidth();
+                        track.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+                }
             });
-        }); // Close DOMContentLoaded
+        });
     </script>
     <!-- Cart functionality -->
     <script src="js/cart.js"></script>
@@ -1071,97 +1040,6 @@
                 console.error('Error updating cart count:', error);
             }
         }
-        
-        // Initialize sliders
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all sliders
-            const sliders = [
-                { trackId: 'freshCardsTrack', prevBtnId: 'freshSliderPrev', nextBtnId: 'freshSliderNext' },
-                { trackId: 'summerCardsTrack', prevBtnId: 'summerSliderPrev', nextBtnId: 'summerSliderNext' },
-                { trackId: 'nightCardsTrack', prevBtnId: 'nightSliderPrev', nextBtnId: 'nightSliderNext' },
-                { trackId: 'winterCardsTrack', prevBtnId: 'winterSliderPrev', nextBtnId: 'winterSliderNext' }
-            ];
-
-            sliders.forEach(slider => {
-                const track = document.getElementById(slider.trackId);
-                const prevBtn = document.getElementById(slider.prevBtnId);
-                const nextBtn = document.getElementById(slider.nextBtnId);
-                
-                if (!track || !prevBtn || !nextBtn) return;
-
-                const cards = track.querySelectorAll('.fresh-card');
-                if (cards.length === 0) return;
-
-                // Set track styles
-                track.style.display = 'flex';
-                track.style.transition = 'transform 0.3s ease';
-                track.style.gap = '24px';
-                
-                // Calculate card width including gap
-                const cardWidth = cards[0].offsetWidth + 24; // 24px gap
-                let currentPosition = 0;
-                const containerWidth = track.parentElement.offsetWidth;
-                const maxScroll = -(cardWidth * cards.length - containerWidth);
-                
-                // Set track width to fit all cards
-                track.style.width = `${cardWidth * cards.length}px`;
-
-                // Update button states
-                const updateButtons = () => {
-                    prevBtn.disabled = currentPosition >= 0;
-                    nextBtn.disabled = currentPosition <= maxScroll;
-                    
-                    // Add/remove disabled class for styling
-                    prevBtn.classList.toggle('disabled', prevBtn.disabled);
-                    nextBtn.classList.toggle('disabled', nextBtn.disabled);
-                };
-
-                // Move slider function
-                const moveSlider = (direction) => {
-                    const moveAmount = direction === 'next' ? -cardWidth : cardWidth;
-                    currentPosition += moveAmount;
-                    
-                    // Limit the scroll position
-                    if (currentPosition > 0) currentPosition = 0;
-                    if (currentPosition < maxScroll) currentPosition = maxScroll;
-                    
-                    track.style.transform = `translateX(${currentPosition}px)`;
-                    updateButtons();
-                };
-
-                // Event listeners for buttons
-                nextBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (!nextBtn.disabled) moveSlider('next');
-                });
-
-                prevBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    if (!prevBtn.disabled) moveSlider('prev');
-                });
-
-                // Initialize buttons
-                updateButtons();
-
-                // Handle window resize
-                let resizeTimer;
-                window.addEventListener('resize', () => {
-                    clearTimeout(resizeTimer);
-                    resizeTimer = setTimeout(() => {
-                        const newContainerWidth = track.parentElement.offsetWidth;
-                        const newMaxScroll = -(cardWidth * cards.length - newContainerWidth);
-                        
-                        // Adjust current position
-                        if (currentPosition < newMaxScroll) {
-                            currentPosition = newMaxScroll;
-                            track.style.transform = `translateX(${currentPosition}px)`;
-                        }
-                        
-                        updateButtons();
-                    }, 100);
-                });
-            });
-        });
     </script>
 </body>
 </html>

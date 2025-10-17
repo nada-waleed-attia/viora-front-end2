@@ -306,29 +306,50 @@ textarea.form-control {
 
 /* Checkout Button */
 .btn-checkout {
-    background-color: var(--main-color);
-    color: #fff;
+    background: linear-gradient(135deg, var(--main-color) 0%, #d4a574 100%);
+    color: var(--secondary-color);
     border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
     cursor: pointer;
     width: 100%;
     transition: all 0.3s ease;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    box-shadow: 0 4px 15px rgba(241, 205, 137, 0.4);
+    margin-top: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-checkout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-checkout:hover::before {
+    left: 100%;
 }
 
 .btn-checkout:hover {
-    background-color: #e0b15a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #d4a574 0%, var(--main-color) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(241, 205, 137, 0.6);
+    color: #fff;
 }
 
 .btn-checkout:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(241, 205, 137, 0.4);
 }
 
 /* Contact Section */

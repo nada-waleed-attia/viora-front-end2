@@ -65,13 +65,73 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Create and show new message
         const messageDiv = document.createElement('div');
-        messageDiv.className = `cart-message alert alert-${type === 'error' ? 'danger' : 'success'} fixed-top text-center mt-5`;
-        messageDiv.textContent = message;
+        messageDiv.className = `cart-message`;
+        messageDiv.style.cssText = `
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background-color: ${type === 'error' ? '#dc3545' : '#28a745'};
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideIn 0.3s ease;
+        `;
+        
+        // Add icon
+        const icon = document.createElement('i');
+        icon.className = type === 'error' ? 'fas fa-exclamation-circle' : 'fas fa-check-circle';
+        icon.style.fontSize = '1.2rem';
+        messageDiv.appendChild(icon);
+        
+        // Add text
+        const text = document.createElement('span');
+        text.textContent = message;
+        messageDiv.appendChild(text);
+        
         document.body.appendChild(messageDiv);
+        
+        // Add animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+            }
+        `;
+        if (!document.querySelector('#cart-message-style')) {
+            style.id = 'cart-message-style';
+            document.head.appendChild(style);
+        }
         
         // Auto-remove message after 3 seconds
         setTimeout(() => {
-            messageDiv.remove();
+            messageDiv.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 300);
         }, 3000);
     }
     
@@ -83,8 +143,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update all cart count elements
             document.querySelectorAll('.cart-count').forEach(element => {
+                const oldCount = parseInt(element.textContent) || 0;
                 element.textContent = cartCount;
-                element.style.display = cartCount > 0 ? 'inline-block' : 'none';
+                element.style.display = cartCount > 0 ? 'flex' : 'none';
+                
+                // Add bounce animation when count increases
+                if (cartCount > oldCount) {
+                    element.style.animation = 'none';
+                    setTimeout(() => {
+                        element.style.animation = 'bounce 0.5s ease';
+                    }, 10);
+                }
             });
         } catch (e) {
             console.error('Error updating cart count:', e);

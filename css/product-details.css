@@ -12,6 +12,35 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    padding-top: 80px;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f1cd89 !important;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f1cd89 !important;
+}
+
+.nav-link.active {
+    color: #f1cd89 !important;
 }
 
 /* Product Images */

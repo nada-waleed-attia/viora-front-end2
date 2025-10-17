@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
             discount: 20,
             description: 'عطر نسائي فاخر يجمع بين أناقة الزهور البرية ونضارة الحمضيات. يتميز بعبير فريد يدوم طوال اليوم، مما يجعلك تشعرين بالأناقة والجاذبية في كل الأوقات.',
             images: [
-                'images/product-1-1.jpg',
-                'images/product-1-2.jpg',
-                'images/product-1-3.jpg',
-                'images/product-1-4.jpg'
+                'https://fimgs.net/mdimg/perfume/o.111377.jpg',
+                'https://beautikashop.com/cdn/shop/files/vibe_intense_lady.jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHPPN6pqtc_tHsUf7j_cucnzoIVHuYAt2TA&s',
+                'https://i.pinimg.com/736x/f7/d7/6f/f7d76fb14ea168a9d00835fadc058265.jpg'
             ],
             scentProfile: ['ياسمين', 'ورد', 'فانيلا', 'برتقال'],
             rating: 4.5,

@@ -91,8 +91,11 @@ function handleCheckout(e) {
     // Clear the cart
     localStorage.setItem('cart', JSON.stringify([]));
     
-    // Redirect to thank you page or home
-    window.location.href = 'thank-you.html';
+    // Update cart count
+    updateCartCount();
+    
+    // Redirect to home page
+    window.location.href = 'viora.html';
 }
 
 // Update cart count in navbar
